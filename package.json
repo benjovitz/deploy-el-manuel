@@ -7,7 +7,9 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "deploy:pre": "vercel build && vercel deploy --prebuilt --archive=tgz",
+    "deploy:prod": "vercel build --prod && vercel deploy --prebuilt --archive=tgz --prod"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.10.1",
